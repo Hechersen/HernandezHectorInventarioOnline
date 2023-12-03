@@ -1,0 +1,56 @@
+[
+    {
+        "nombre": "Buzo",
+        "categoria": "Ropa",
+        "stock": 20,
+        "precio": 100
+    },
+    {
+        "nombre": "Remera",
+        "categoria": "Ropa",
+        "stock": 50,
+        "precio": 50
+    },
+    {
+        "nombre": "Zapatillas",
+        "categoria": "Calzado",
+        "stock": 35,
+        "precio": 120
+    },
+    {
+        "nombre": "Reloj",
+        "categoria": "Accesorios",
+        "stock": 20,
+        "precio": 80
+    },
+    {
+        "nombre": "Jean",
+        "categoria": "Ropa",
+        "stock": 40,
+        "precio": 70
+    },
+    {
+        "nombre": "Gorro",
+        "categoria": "Accesorios",
+        "stock": 25,
+        "precio": 70
+    },
+    {
+        "nombre": "Mochila",
+        "categoria": "Accesorios",
+        "stock": 20,
+        "precio": 90
+    },
+    {
+        "nombre": "Medias",
+        "categoria": "Ropa",
+        "stock": 100,
+        "precio": 25
+    },
+    {
+        "nombre": "Ojotas",
+        "categoria": "Calzado",
+        "stock": 75,
+        "precio": 70
+    }
+]
