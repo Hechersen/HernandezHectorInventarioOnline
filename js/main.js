@@ -1,41 +1,11 @@
 // Funciones
 
-function pedirNombre() {
-    let nombre;
-    do {
-        nombre = prompt("Ingrese su nombre");
-    } while (!nombre);
-
-    // Método join
-
-    const listaNombresProductos = obtenerNombresProductos(productos);
-
-    Swal.fire({
-        title: 'Bienvenido ' + nombre,
-        text: 'La lista inicial de productos es: ' + listaNombresProductos + '. Puede ver una lista detallada en la consola.',
-        icon: 'info',
-        confirmButtonText: 'Entendido'
-    });
-}
-
 // Nombres de los productos
 
 function obtenerNombresProductos(productos) {
     const nombres = productos.map(producto => producto.nombre);
     return nombres.join(', ')
 }
-
-// Producto más caro
-
-// function productoMasCaro(productos) {
-//     return productos.reduce((max, producto) => (producto.precio > max.precio) ? producto : max, productos[0]);
-// }
-
-// Producto más barato
-
-// function productoMasBarato(productos) {
-//     return productos.reduce((min, producto) => (producto.precio < min.precio) ? producto : min, productos[0]);
-// }
 
 // Función para renderizar una tarjeta de producto y agregarla al DOM
 
@@ -177,14 +147,17 @@ class Producto {
 }
 
 // Creación de array de productos
+
 let productos = [];
 
 // Función para guardar los productos en localStorage
+
 function guardarProductosEnLocalStorage() {
     localStorage.setItem("productos", JSON.stringify(productos));
 }
 
 // Función para obtener productos desde LocalStorage
+
 function obtenerProductosDesdeLocalStorage() {
     const productosGuardados = localStorage.getItem("productos");
     return productosGuardados ? JSON.parse(productosGuardados) : [];
@@ -298,8 +271,6 @@ const agregarProducto = async () => {
 
 document.getElementById("btnIngresarProductos").addEventListener("click", agregarProducto);
 
-console.log(productos);
-
 // Crear las tarjetas de productos
 
 const contenedorRow = document.createElement("div");
@@ -362,15 +333,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-/**
- *
- * Proyecto final
- *
- */
-
-// pedirNombre()
-
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         let cargaInicialRealizada = localStorage.getItem('cargaInicialRealizada');
@@ -406,7 +368,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     } catch (error) {
         console.error('Error:', error);
         // Mensaje de error
-    }
+    }    
+    console.log(productos);
 });
 
 
